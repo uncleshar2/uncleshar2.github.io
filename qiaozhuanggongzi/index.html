@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="乔装公子哥 - 深度解析伪装身份的都市小说、影视作品及现实伪装技巧。提供伪装形象设计、社交礼仪指南及相关文学影视资源推荐。">
+    <meta name="keywords" content="乔装公子哥,伪装身份,都市小说,影视推荐,社交伪装,形象设计">
+    <title>乔装公子哥 - 都市伪装形象与文学影视资源指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d35400;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .view-all {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Featured Works Grid */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .work-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .work-cover {
+            height: 380px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .work-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .work-info {
+            padding: 20px;
+        }
+
+        .work-title {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .work-meta {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .work-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Analysis Section */
+        .analysis-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 60px;
+            border: 1px solid var(--border-color);
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .analysis-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .analysis-content p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .analysis-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .analysis-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .analysis-visual {
+            background-color: #f1f3f5;
+            border-radius: 8px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .analysis-visual::after {
+            content: '形象气质分析示意图';
+            color: #999;
+            font-style: italic;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #bdc3c7;
+            font-size: 0.95rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container nav {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span>乔装</span>公子哥
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">精选作品</a></li>
+                    <li><a href="#">伪装技巧</a></li>
+                    <li><a href="#">影视推荐</a></li>
+                    <li><a href="#">社区论坛</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>隐秘的都市精英<br>在光影中重塑自我</h1>
+        <p>探索“乔装公子哥”这一独特文化现象，从经典小说中的身份互换，到现代社交中的形象管理，为您深度解析伪装背后的心理与技巧。</p>
+        <a href="#featured" class="btn">探索精选资源</a>
+    </section>
+
+    <main id="featured">
+        <div class="section-header">
+            <h2>热门推荐</h2>
+            <a href="#" class="view-all">查看全部 &rarr;</a>
+        </div>
+
+        <div class="works-grid">
+            <!-- Card 1 -->
+            <article class="work-card">
+                <div class="work-cover">
+                    <img src="https://picsum.photos/seed/novel1/400/600" alt="都市伪装小说封面">
+                    <span class="work-tag">小说</span>
+                </div>
+                <div class="work-info">
+                    <h3 class=" work-title">隐世豪门的伪装者</h3>
+                    <div class="work-meta">作者：云中鹤 | 类型：都市生活 | 阅读量：120w</div>
+                    <p class="work-desc">讲述一名落魄青年意外获得神秘身份，从此以“乔装公子哥”的姿态混迹于上流社会，在欢笑与泪水中揭开家族百年秘密的故事。</p>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="work-card">
+                <div class="work-cover">
+                    <img src="https://picsum.photos/seed/movie2/400/600" alt="伪装主题电影海报">
+                    <span class="work-tag">影视</span>
+                </div>
+                <div class="work-info">
+                    <h3 class="work-title">面具之下</h3>
+                    <div class="work-meta">类型：悬疑/剧情 | 评分：9.2 | 时长：120分钟</div>
+                    <p class="work-desc">一部关于身份认同的心理惊悚片。主角为了保护家人，不得不乔装成一名纨绔子弟，在复杂的都市网络中寻找真相。</p>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="work-card">
+                <div class="work-cover">
+                    <img src="https://picsum.photos/seed/comic3/400/600" alt="漫画封面">
+                    <span class="work-tag">漫画</span>
+                </div>
+                <div class="work-info">
+                    <h3 class="work-title">少爷的逆袭</h3>
+                    <div class="work-meta">作者：星野 | 平台：腾讯动漫 | 更新中</div>
+                    <p class="work-desc">画风精致的都市异能漫画。主角觉醒“全知之眼”，能够看到他人伪装的属性，从此以“乔装公子哥”的身份游走于黑白两道。</p>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="work-card">
+                <div class="work-cover">
+                    <img src="https://picsum.photos/seed/tech4/400/600" alt="形象管理指南">
+                    <span class="work-tag">指南</span>
+                </div>
+                <div class="work-info">
+                    <h3 class="work-title">绅士伪装学入门</h3>
+                    <div class="work-meta">分类：形象管理 | 阅读时间：5分钟</div>
+                    <p class="work-desc">从衣着搭配到言谈举止，详细解析如何通过“乔装”来提升个人气场，打造令人信服的精英形象。</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="section-header">
+            <h2>深度解析</h2>
+        </div>
+
+        <section class="analysis-section">
+            <div class="analysis-grid">
+                <div class="analysis-content">
+                    <h3>什么是“乔装公子哥”？</h3>
+                    <p>“乔装公子哥”并非单一的概念，而是一种特定的叙事模式和生活状态。在文学作品中，它通常指主角为了隐藏真实身份或达成某种目的，而暂时扮演富家子弟或社会名流的角色。</p>
+                    <p>这种行为往往伴随着巨大的反差感：外表光鲜亮丽、举止优雅，内心却可能藏着不为人知的秘密或真实的经济状况。这种反差为故事带来了戏剧张力，也让读者产生了强烈的代入感。</p>
+                    <ul class="analysis-list">
+                        <li><strong>叙事功能：</strong> 推动剧情发展，制造冲突与悬念。</li>
+                        <li><strong>人物成长：</strong> 在伪装过程中，主角学习成熟与责任。</li>
+                        <li><strong>社会映射：</strong> 反映了社会对身份、财富和地位的渴望。</li>
+                    </ul>
+                </div>
+                <div class="analysis-visual">
+                    <!-- Placeholder for visual analysis -->
+                </div>
+            </div>
+        </section>
+
+        <div class="section-header">
+            <h2>常见问题 (FAQ)</h2>
+        </div>
+
+        <section class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">
+                    乔装公子哥类的小说适合什么人群阅读？
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    这类小说非常适合喜欢都市生活、职场晋升以及身份互换题材的读者。它通常节奏明快，情节跌宕起伏，能够提供爽快的阅读体验。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    在现实生活中乔装成公子哥需要注意什么？
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    现实中的“乔装”应建立在诚信的基础上。如果是为了社交礼仪提升，建议学习得体的举止而非伪造身份。伪造财富和背景不仅违法，还可能导致严重的信任危机。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    如何挑选高质量的伪装题材影视作品？
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    关注作品的演技表现和剧本逻辑。优秀的作品不仅在于外表的华丽，更在于对人物内心挣扎和身份认同的深度挖掘。
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于乔装公子哥</h4>
+                <p style="color: #bdc3c7; font-size: 0.9rem;">
+                    本站致力于为读者提供最优质的伪装题材文学、影视资源及相关的形象管理指南。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>栏目导航</h4>
+                <ul>
+                    <li><a href="#">最新小说</a></li>
+                    <li><a href="#">高分电影</a></li>
+                    <li><a href="#">漫画连载</a></li>
+                    <li><a href="#">伪装技巧</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">用户协议</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 乔装公子哥资源站. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileBtn.addEventListener('click', () => {
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '70px';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.backgroundColor = 'white';
+                nav.style.padding = '20px';
+                nav.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
