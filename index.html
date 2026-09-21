@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="剑网3海图任务全攻略：包含海图收集路线、宝箱坐标、隐藏彩蛋及任务完成技巧，助你高效通关。">
+    <meta name="keywords" content="剑网3海图任务,剑网3海图,剑网3攻略,剑网3宝箱">
+    <title>剑网3海图任务-海图收集路线与隐藏宝箱坐标指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d35400;
+            --text-color: #333;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+            --nav-height: 60px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            height: var(--nav-height);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 1.8rem;
+            color: #fdbb2d;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: -30px auto 40px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 24px;
+        }
+
+        /* Sidebar */
+        aside {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            height: fit-content;
+        }
+
+        .filter-group {
+            margin-bottom: 24px;
+        }
+
+        .filter-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+            border-left: 3px solid var(--accent-color);
+            padding-left: 8px;
+        }
+
+        .filter-list li {
+            margin-bottom: 8px;
+        }
+
+        .filter-list a {
+            display: block;
+            padding: 8px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .filter-list a:hover, .filter-list a.active {
+            background-color: #fff5eb;
+            color: var(--accent-color);
+        }
+
+        /* Content Area */
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* Section Styling */
+        section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-header h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+        }
+
+        .section-header .more {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Map Grid */
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .map-card {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+
+        .map-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .map-thumb {
+            height: 160px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .map-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .map-info {
+            padding: 16px;
+        }
+
+        .map-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .map-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .map-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #1a252f;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Tips List */
+        .tips-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .tip-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .tip-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .tip-content h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: var(--text-color);
+        }
+
+        .tip-content p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .faq-item h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #bdc3c7;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">剑网3<span>攻略</span></a>
+            <nav class="nav-links">
+                <a href="#" class="active">海图任务</a>
+                <a href="#">奇遇攻略</a>
+                <a href="#">副本指南</a>
+                <a href="#">PVP技巧</a>
+                <a href="#">萌新入门</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>剑网3海图任务</h1>
+        <p>探索浩瀚江湖，收集珍稀海图。本站提供最新海图收集路线、宝箱坐标及隐藏任务全攻略。</p>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>海图区域</p>
+            </div>
+            <div class="stat-item">
+                <h3>200+</h3>
+                <p>隐藏宝箱</p>
+            </div>
+            <div class="stat-item">
+                <h3>0</h3>
+                <p>错过概率</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside>
+            <div class="filter-group">
+                <div class="filter-title">海图区域</div>
+                <ul class="filter-list">
+                    <li><a href="#" class="active">全部海图</a></li>
+                    <li><a href="#">东海区域</a></li>
+                    <li><a href="#">南海区域</a></li>
+                    <li><a href="#">西海区域</a></li>
+                    <li><a href="#">北海区域</a></li>
+                    <li><a href="#">黑海岸</a></li>
+                </ul>
+            </div>
+            <div class="filter-group">
+                <div class="filter-title">任务类型</div>
+                <ul class="filter-list">
+                    <li><a href="#">主线海图</a></li>
+                    <li><a href="#">支线海图</a></li>
+                    <li><a href="#">悬赏海图</a></li>
+                    <li><a href="#">成就海图</a></li>
+                </ul>
+            </div>
+            <div class="filter-group">
+                <div class="filter-title">实用工具</div>
+                <ul class="filter-list">
+                    <li><a href="#">海图坐标查询</a></li>
+                    <li><a href="#">宝箱刷新时间</a></li>
+                    <li><a href="#">钓鱼图鉴</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-area">
+            
+            <!-- Latest Maps -->
+            <section>
+                <div class="section-header">
+                    <h2>最新海图任务</h2>
+                    <a href="#" class="more">查看全部 &rarr;</a>
+                </div>
+                <div class="map-grid">
+                    <article class="map-card">
+                        <div class="map-thumb">
+                            <img src="https://picsum.photos/seed/map1/400/250" alt="东海迷雾海图">
+                            <span class="map-badge">热门</span>
+                        </div>
+                        <div class="map-info">
+                            <h3 class="map-title">东海迷雾海图</h3>
+                            <div class="map-meta">
+                                <span>📍 东海 · 剑阁海域</span>
+                                <span>⏳ 收集耗时: 30min</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">位于剑阁外围海域，需完成前置【寻龙诀】任务线，宝箱分布在岛屿悬崖边。</p>
+                            <a href="#" class="btn">查看详细攻略</a>
+                        </div>
+                    </article>
+
+                    <article class="map-card">
+                        <div class="map-thumb">
+                            <img src="https://picsum.photos/seed/map2/400/250" alt="南海珊瑚海图">
+                        </div>
+                        <div class="map-info">
+                            <h3 class="map-title">南海珊瑚海图</h3>
+                            <div class="map-meta">
+                                <span>📍 南海 · 珊瑚岛</span>
+                                <span>⏳ 收集耗时: 45min</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">水下探索任务，需要携带潜水道具。隐藏宝箱需击败守护蟹后开启。</p>
+                            <a href="#" class="btn btn-outline">查看详细攻略</a>
+                        </div>
+                    </article>
+
+                    <article class="map-card">
+                        <div class="map-thumb">
+                            <img src="https://picsum.photos/seed/map3/400/250" alt="黑海岸幽灵海图">
+                            <span class="map-badge">困难</span>
+                        </div>
+                        <div class="map-info">
+                            <h3 class="map-title">黑海岸幽灵海图</h3>
+                            <div class="map-meta">
+                                <span>📍 黑海岸</span>
+                                <span>⏳ 收集耗时: 60min</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">夜间刷新任务，涉及大量跑图与解谜，建议组队前往以提高效率。</p>
+                            <a href="#" class="btn btn-outline">查看详细攻略</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Tips Section -->
+            <section>
+                <div class="section-header">
+                    <h2>海图任务避坑指南</h2>
+                </div>
+                <div class="tips-list">
+                    <div class="tip-item">
+                        <div class="tip-icon">⚓</div>
+                        <div class="tip-content">
+                            <h4>船只与载具</h4>
+                            <p>大部分海图任务需要通过船只移动，请确保你的船只已升级至【铁甲】级别，否则在风暴区域容易沉船。</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">🧭</div>
+                        <div class="tip-content">
+                            <h4>坐标定位技巧</h4>
+                            <p>使用小地图的【标记】功能。对于范围较大的海图，建议先在岸边标记参照物，再按顺序标记海图上的关键点。</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">🎁</div>
+                        <div class="tip-content">
+                            <h4>宝箱刷新机制</h4>
+                            <p>大部分隐藏宝箱遵循24小时刷新机制，但部分活动期间（如端午、中秋）会开启临时双倍刷新，请关注活动公告。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section>
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>海图任务会影响主线进度吗？</h4>
+                        <p>海图任务属于支线或收集类内容，不强制要求完成，但完成后可获得大量侠义值和称号奖励。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>海图丢失了怎么办？</h4>
+                        <p>海图属于绑定物品，无法交易或找回。建议在完成关键步骤时截图保存进度，或使用游戏内的“行囊管理”功能定期整理。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>为什么我看不到海图NPC？</h4>
+                        <p>部分海图NPC有等级或前置任务限制，请检查是否已达到【江湖等级】要求，或是否完成了指定的前置奇遇。</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">关于本站</a>
+            <a href="#">联系我们</a>
+            <a href="#">免责声明</a>
+            <a href="#">玩家互助</a>
+        </div>
+        <p>&copy; 2023 剑网3玩家社区攻略站. All rights reserved. 本站内容仅供玩家交流参考。</p>
+    </footer>
+
+</body>
+                                                                               </html>
