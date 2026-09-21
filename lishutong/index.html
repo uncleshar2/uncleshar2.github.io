@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李书通 - 资深数据架构师与数字化解决方案专家</title>
+    <meta name="description" content="李书通官网。专注于企业级数据架构设计、大数据平台搭建及数字化转型咨询。提供专业架构方案、技术白皮书及咨询服务。">
+    <meta name="keywords" content="李书通,数据架构,大数据,数字化转型,技术咨询,企业信息化">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --accent-hover: #1d4ed8;
+            --bg-light: #f8fafc;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center { text-align: center; }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .btn-cta {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--accent-hover);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
+            color: var(--white);
+            padding: 100px 0 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--white);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: var(--white);
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .about-list {
+            margin-top: 2rem;
+        }
+
+        .about-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .about-list li::before {
+            content: '✓';
+            background-color: #dbeafe;
+            color: var(--accent-color);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .about-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item input,
+        .contact-item textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .contact-item input:focus,
+        .contact-item textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--bg-light);
+            padding: 40px;
+            border-radius: var(--radius);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-color);
+            background-color: var(--white);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #eff6ff;
+            color: var(--accent-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Blog/Insights Section */
+        .insights {
+            background-color: var(--bg-light);
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .insight-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.3s;
+        }
+
+        .insight-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .insight-img {
+            height: 200px;
+            background-color: #cbd5e1;
+            overflow: hidden;
+        }
+
+        .insight-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .insight-card:hover .insight-img img {
+            transform: scale(1.05);
+        }
+
+        .insight-content {
+            padding: 25px;
+        }
+
+        .insight-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .insight-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            line-height: 1.4;
+        }
+
+        .insight-content p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .read-more:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #94a3b8;
+            padding: 60px 0 30px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            max-width: 300px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-text p {
+                margin: 0 auto 2rem auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">李书通<span>架构</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#services">专业领域</a></li>
+                    <li><a href="#insights">技术见解</a></li>
+                    <li><a href="#contact">联系咨询</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn-cta">预约咨询</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>构建可扩展的数字化未来</h1>
+                    <p>资深数据架构师与解决方案专家，致力于为企业提供高可用、高性能的大数据平台设计与数字化转型咨询。</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn-cta">了解我的服务</a>
+                        <a href="#insights" class="btn-outline">阅读技术文章</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Using a placeholder for a professional avatar or office setting -->
+                    <img src="https://picsum.photos/seed/lishutong_arch/600/400" alt="李书通工作场景" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <div class="container">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">年行业经验</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">成功案例</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">项目交付率</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">技术支持</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>专注于企业级数据架构与数字化转型</h2>
+                        <p>我是李书通，一名拥有超过十五年经验的资深数据架构师。在过去的职业生涯中，我专注于为金融、零售和制造行业构建高并发、高可用的数据中台，帮助客户从数据孤岛走向数据资产化。</p>
+                        <p>我坚信技术是业务增长的引擎。通过深入理解业务场景，我将复杂的技术架构转化为企业可落地的解决方案，确保数据在流动中产生价值。</p>
+                        <ul class="about-list">
+                            <li>精通分布式系统设计与微服务架构</li>
+                            <li>擅长大数据处理平台（Hadoop/Spark/Flink）搭建</li>
+                            <li>具备丰富的云原生架构迁移经验</li>
+                            <li>专注于数据安全与合规性治理</li>
+                        </ul>
+                    </div>
+                    <div class="about-card">
+                        <h3>建立联系</h3>
+                        <form action="#" method="post" onsubmit="event.preventDefault(); alert('感谢您的咨询，李书通团队将尽快与您联系。');">
+                            <div class="contact-item">
+                                <label for="name">您的姓名</label>
+                                <input type="text" id="name" placeholder="请输入姓名" required>
+                            </div>
+                            <div class="contact-item">
+                                <label for="company">公司/机构名称</label>
+                                <input type="text" id="company" placeholder="请输入公司名称">
+                            </div>
+                            <div class="contact-item">
+                                <label for="message">咨询需求</label>
+                                <textarea id="message" rows="4" placeholder="请简述您的项目需求..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-cta" style="width: 100%;">发送咨询</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">核心服务领域</h2>
+                    <p class="section-subtitle">提供从顶层设计到落地实施的全生命周期技术支持，助力企业稳健发展。</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h3>数据中台架构</h3>
+                        <p>构建统一的数据湖仓架构，打破数据壁垒，实现数据的标准化治理与多场景复用，提升数据资产价值。</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        </div>
+                        <h3>大数据处理平台</h3>
+                        <p>基于Hadoop、Spark和Flink技术栈，提供海量数据实时计算与离线批处理解决方案，保障系统高性能运行。</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        </div>
+                        <h3>云原生迁移咨询</h3>
+                        <p>协助企业从传统架构平滑迁移至AWS、Azure或阿里云环境，优化资源利用率，降低运维成本。</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3>网络安全与合规</h3>
+                        <p>设计符合等保三级及GDPR标准的数据安全防护体系，确保企业核心数据资产的机密性、完整性与可用性。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights Section -->
+        <section id="insights" class="section-padding insights">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">技术见解与分享</h2>
+                    <p class="section-subtitle">分享关于架构设计、技术选型及行业趋势的深度思考。</p>
+                </div>
+                <div class="insights-grid">
+                    <article class="insight-card">
+                        <div class="insight-img">
+                            <img src="https://picsum.photos/seed/tech1/400/250" alt="微服务架构图解">
+                        </div>
+                        <div class="insight-content">
+                            <span class="insight-tag">架构设计</span>
+                            <h3>微服务治理的最佳实践：从单体到分布式的演进之路</h3>
+                            <p>探讨在业务快速迭代背景下，如何通过合理的拆分策略和治理手段，避免微服务带来的分布式复杂性。</p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                    <article class="insight-card">
+                        <div class="insight-img">
+                            <img src="https://picsum.photos/seed/tech2/400/250" alt="大数据处理流程">
+                        </div>
+                        <div class="insight-content">
+                            <span class="insight-tag">大数据</span>
+                            <h3>实时数仓建设：Flink CDC 在金融风控场景的应用</h3>
+                            <p>解析如何利用变更数据捕获（CDC）技术实现数据的一致性同步，构建毫秒级风控决策引擎。</p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                    <article class="insight-card">
+                        <div class="insight-img">
+                            <img src="https://picsum.photos/seed/tech3/400/250" alt="数字化转型趋势">
+                        </div>
+                        <div class="insight-content">
+                            <span class="insight-tag">行业趋势</span>
+                            <h3>AI时代的企业数据治理挑战与机遇</h3>
+                            <p>在生成式AI普及的当下，高质量的数据资产已成为企业核心竞争力的关键，企业该如何应对？</p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-padding" style="background-color: var(--primary-color); color: var(--white);">
+            <div class="container text-center">
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;">准备好开始您的数字化转型了吗？</h2>
+                <p style="margin-bottom: 2rem; color: #cbd5e1; max-width: 600px; margin-left: auto; margin-right: auto;">无论您是面临技术瓶颈，还是寻求架构升级，李书通都随时准备为您提供专业的技术咨询服务。</p>
+                <a href="#contact" class="btn-cta" style="background-color: var(--white); color: var(--primary-color);">立即联系</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>李书通架构</h2>
+                    <p>致力于为企业提供卓越的数据架构设计与数字化转型服务，连接业务与技术，驱动商业增长。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#about">关于我</a></li>
+                        <li><a href="#services">专业服务</a></li>
+                        <li><a href="#insights">技术文章</a></li>
+                        <li><a href="#contact">联系咨询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务领域</h4>
+                    <ul>
+                        <li><a href="#">数据中台</a></li>
+                        <li><a href="#">大数据平台</a></li>
+                        <li><a href="#">云原生架构</a></li>
+                        <li><a href="#">数据安全</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>邮箱：contact@lishutong.com</li>
+                        <li>电话：+86 10 8888 6666</li>
+                        <li>地址：北京市朝阳区科技园A座</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 李书通架构工作室. All rights reserved. </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
