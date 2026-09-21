@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="桃花庵唐伯虎《桃花庵歌》全诗原文赏析，解读“别人笑我太疯癫，我笑他人看不穿”背后的洒脱人生与文人情怀。">
+    <meta name="keywords" content="桃花庵唐伯虎, 桃花庵歌, 唐伯虎, 原文, 赏析, 古诗, 明代诗词">
+    <title>桃花庵唐伯虎-《桃花庵歌》原文赏析与人生哲学解读</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #b55a45; /* 桃红/深红 */
+            --primary-dark: #8a3b2b;
+            --secondary-color: #fdfbf7; /* 米白背景 */
+            --text-main: #2c2c2c;
+            --text-light: #666;
+            --accent-green: #6b8e23;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1000px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--secondary-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* 通用布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-main);
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* 首屏 Hero */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/peach_blossom/1200/600.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            font-family: "Kaiti SC", "STKaiti", serif; /* 楷体更有古风 */
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* 主要内容区 */
+        main {
+            padding-bottom: 60px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* 原文展示 */
+        .poem-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .poem-title {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: "Kaiti SC", "STKaiti", serif;
+        }
+
+        .poem-content {
+            font-size: 1.4rem;
+            line-height: 2.2;
+            color: #444;
+            text-align: center;
+            font-family: "Kaiti SC", "STKaiti", serif;
+        }
+
+        .poem-content p {
+            margin-bottom: 15px;
+        }
+
+        .poem-content .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* 侧边栏 */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-green);
+            padding-left: 10px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .info-list li strong {
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* 赏析区 */
+        .section-title {
+            font-size: 1.5rem;
+            margin: 50px 0 25px;
+            padding-left: 15px;
+            border-left: 5px solid var(--primary-color);
+            color: var(--primary-dark);
+        }
+
+        .article-body {
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .article-body p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .article-body h4 {
+            margin: 25px 0 15px;
+            color: var(--text-main);
+        }
+
+        /* 互动/评论 */
+        .comments-section {
+            margin-top: 40px;
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--border-radius);
+        }
+
+        .comment-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .comment-item:last-child {
+            border-bottom: none;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .comment-author {
+            font-weight: bold;
+            color: var(--primary-dark);
+        }
+
+        .comment-date {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 0 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .poem-content {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span></span>
+                <span>古韵诗文</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">唐诗宋词</a></li>
+                    <li><a href="#">元曲精选</a></li>
+                    <li><a href="#">明清小说</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>桃花庵歌</h1>
+            <p>明 · 唐寅</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="content-grid">
+            <!-- 左侧主要内容 -->
+            <article class="main-content">
+                <div class="poem-card">
+                    <h2 class="poem-title">桃花庵歌</h2>
+                    <div class="poem-content">
+                        <p>桃花坞里桃花庵，<span class="highlight">桃花庵下桃花仙</span>。</p>
+                        <p>桃花仙人种桃树，又折桃花卖酒钱。</p>
+                        <p>酒醒只在花前坐，酒醉还来花下眠。</p>
+                        <p><span class="highlight">半醒半醉日复日，花落花开年复年</span>。</p>
+                        <p>但愿老死花酒间，不愿鞠躬车马前。</p>
+                        <p>车尘马足贵者趣，酒盏花枝贫者缘。</p>
+                        <p>若将富贵比贫者，一在平地一在天。</p>
+                        <p>若将贫贱比车马，他得驱驰我得闲。</p>
+                        <p>别人笑我太疯癫，我笑他人看不穿。</p>
+                        <p>不见五陵豪杰墓，无花无酒锄作田。</p>
+                    </div>
+                </div>
+
+                <h2 class="section-title">诗文赏析</h2>
+                <div class="article-body">
+                    <p>《桃花庵歌》是明代才子唐寅（唐伯虎）的代表作之一，也是他晚年隐居桃花坞时所作。这首诗以“桃花”和“酒”为核心意象，构建了一个超脱世俗、逍遥自在的精神世界，生动地刻画了一位“桃花仙人”的形象。</p>
+                    
+                    <h4>1. 隐逸生活的写照</h4>
+                    <p>诗的开篇“桃花坞里桃花庵，桃花庵下桃花仙”，诗人自称“桃花仙”，点明了居住地与身份。随后通过“种桃树”、“折桃花卖酒钱”等动作，勾勒出一种自给自足、以花酿酒的田园生活。这种生活看似清贫，却充满了情趣。</p>
+                    
+                    <h4>2. 贵贱之辨的哲学思考</h4>
+                    <p>诗中“车尘马足贵者趣，酒盏花枝贫者缘”一句，极具张力。诗人将世俗眼中的“富贵”（车马喧嚣）与“贫贱”（花酒清闲）进行了对比。他认为，真正的快乐不在于物质的丰盈，而在于精神的自由。对于追求自由的人来说，富贵是束缚，而清贫中的闲适才是真正的福气。</p>
+                    
+                    <h4>3. “疯癫”背后的清醒</h4>
+                    <p>全诗最脍炙人口的一句莫过于“别人笑我太疯癫，我笑他人看不穿”。表面上看，这是唐寅在嘲笑世人的不解与庸俗；但深层来看，这是他对世俗价值观的蔑视。他深知世人沉迷功名利禄，最终“无花无酒锄作田”，而自己选择在花酒中度过一生，这是一种对生命本质的深刻洞察。</p>
+                </div>
+
+                <h2 class="section-title">相关延伸</h2>
+                <div class="article-body">
+                    <p>唐寅（1470—1523），字伯虎，后改字子畏，号六如居士、桃花庵主等，吴县（今江苏苏州）人。他是明代著名画家、书法家、诗人。他才华横溢，却因科举舞弊案受牵连，后半生潦倒困顿，寄情诗画，游荡江湖。这首诗正是他晚年心态的真实写照，表达了对自由生活的极致向往。</p>
+                </div>
+            </article>
+
+            <!-- 右侧侧边栏 -->
+            <aside>
+                <div class="info-card">
+                    <h3>作者简介</h3>
+                    <ul class="info-list">
+                        <li><strong>姓名</strong>唐寅（唐伯虎）</li>
+                        <li><strong>朝代</strong>明代</li>
+                        <li><strong>字号</strong>字伯虎，号六如居士</li>
+                        <li><strong>籍贯</strong>苏州吴县</li>
+                        <li><strong>地位</strong>明代“吴门四家”之一</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>名句索引</h3>
+                    <ul class="info-list">
+                        <li>别人笑我太疯癫，我笑他人看不穿</li>
+                        <li>但愿老死花酒间，不愿鞠躬车马前</li>
+                        <li>酒醒只在花前坐，酒醉还来花下眠</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>热门分类</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <a href="#" style="background:#f5f5f5; padding:5px 10px; border-radius:4px; font-size:0.85rem; color:#666;">唐诗三百首</a>
+                        <a href="#" style="background:#f5f5f5; padding:5px 10px; border-radius:4px; font-size:0.85rem; color:#666;">宋词精选</a>
+                        <a href="#" style="background:#f5f5f5; padding:5px 10px; border-radius:4px; font-size:0.85rem; color:#666;">李白</a>
+                        <a href="#" style="background:#f5f5f5; padding:5px 10px; border-radius:4px; font-size:0.85rem; color:#666;">苏轼</a>
+                        <a href="#" style="background:#f5f5f5; padding:5px 10px; border-radius:4px; font-size:0.85rem; color:#666;">杜甫</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 评论区模拟 -->
+        <section class="comments-section">
+            <h3>读者评论 (3)</h3>
+            <div class="comment-item">
+                <div class="comment-header">
+                    <span class="comment-author">清风徐来</span>
+                    <span class="comment-date">2023-10-24</span>
+                </div>
+                <p>这首诗真的写透了人生的真谛，太喜欢“别人笑我太疯癫”这句了。</p>
+            </div>
+            <div class="comment-item">
+                <div class="comment-header">
+                    <span class="comment-author">墨客</span>
+                    <span class="comment-date">2023-10-22</span>
+                </div>
+                <p>唐伯虎的才华横溢，可惜命运多舛，这首诗读来令人唏嘘。</p>
+            </div>
+            <div class="comment-item">
+                <div class="comment-header">
+                    <span class="comment-author">路人甲</span>
+                    <span class="comment-date">2023-10-20</span>
+                </div>
+                <p>排版很好看，古风浓厚，赏心悦目。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于古韵</a>
+                <a href="#">版权声明</a>
+                <a href="#">联系站长</a>
+                <a href="#">友情链接</a>
+            </div>
+            <p class="copyright">Copyright © 2023 古韵诗文网. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
