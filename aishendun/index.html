@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>艾什顿 库彻 - 好莱坞演员、制片人及个人资料百科</title>
+    <meta name="description" content="艾什顿·库彻（Ashton Kutcher）官方资料介绍页面。收录其职业生涯代表作、早期经历、个人生活及最新动态，为您提供全面的人物档案与影视作品指南。">
+    <meta name="keywords" content="艾什顿 库彻, Ashton Kutcher, 90210, That '70s Show, 好莱坞演员, 影视作品, 个人简介">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #e63946;
+            --text-color: #333333;
+            --light-text: #666666;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/ashtonhero/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0 6rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background-color: #c92a37;
+            transform: translateY(-2px);
+        }
+
+        /* Profile Section */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 4px solid var(--bg-color);
+        }
+
+        .profile-info h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .profile-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--light-text);
+        }
+
+        /* Works Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .section-title p {
+            color: var(--light-text);
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .work-poster {
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .work-content {
+            padding: 1.5rem;
+        }
+
+        .work-meta {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .work-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .work-desc {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Biography Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e0e0e0;
+        }
+
+        .timeline-item {
+            padding-left: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--secondary-color);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #aaa;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">Ashton<span>库彻</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#profile" class="active">个人资料</a></li>
+                    <li><a href="#works">代表作品</a></li>
+                    <li><a href="#bio">生平经历</a></li>
+                    <li><a href="#news">最新动态</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>艾什顿·库彻 Ashton Kutcher</h1>
+                <p>从荧幕喜剧偶像到科技投资先锋，探索这位好莱坞多面手的职业生涯与个人魅力。</p>
+                <a href="#works" class="btn">查看代表作品</a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="container">
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <img src="https://picsum.photos/seed/ashtonface/300/300.jpg" alt="艾什顿·库彻照片" class="profile-img">
+                    <h2>Ashton Kutcher</h2>
+                    <p style="color: var(--secondary-color); font-weight: 600;">美国演员、制片人、投资人</p>
+                    
+                    <div class="profile-tags">
+                        <span class="tag">1978年2月7日</span>
+                        <span class="tag">美国内华达州</span>
+                        <span class="tag">水瓶座</span>
+                    </div>
+
+                    <p style="font-size: 0.9rem; color: var(--light-text); margin-bottom: 1rem;">
+                        艾什顿·库彻出生于美国内华达州，凭借在情景喜剧《That '70s Show》中饰演迈克尔·阿瑟顿而广为人知。近年来，他转型为活跃的科技投资人，并在慈善领域有着重要贡献。
+                    </p>
+                    
+                    <div style="display: flex; gap: 1rem; justify-content: center;">
+                        <a href="#" style="color: var(--secondary-color); font-weight: 600; font-size: 0.9rem;">Wikipedia &rarr;</a>
+                        <a href="#" style="color: var(--secondary-color); font-weight: 600; font-size: 0.9rem;">IMDb &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="profile-info">
+                    <h3>职业生涯概览</h3>
+                    <p>艾什顿·库彻的演艺生涯始于模特，随后迅速转向影视表演。他在好莱坞拥有超过20年的从业经历，参演过多种类型的电影，包括喜剧、剧情片和科幻片。除了演艺工作，他还是一位颇具影响力的天使投资人，参与了多家知名科技初创公司的早期投资。</p>
+                    <br>
+                    <h3>主要成就</h3>
+                    <ul style="list-style-type: disc; padding-left: 1.5rem; color: var(--light-text);">
+                        <li>主演热门情景喜剧《That '70s Show》长达7季。</li>
+                        <li>主演科幻动作电影《Ghost in the Shell》（2017）。</li>
+                        <li>创立并运营科技播客《Wow in the World》。</li>
+                        <li>长期致力于人类干细胞研究慈善基金会（HT）的推广。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>代表影视作品</h2>
+                    <p>精选艾什顿·库彻最具影响力的电影与电视剧集</p>
+                </div>
+
+                <div class="works-grid">
+                    <!-- Work 1 -->
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/that70sshow/400/600.jpg" alt="That '70s Show" class="work-poster">
+                        <div class="work-content">
+                            <div class="work-meta">电视剧 / 喜剧</div>
+                            <h3 class="work-title">That '70s Show (That '70s Show)</h3>
+                            <p class="work-desc">该剧讲述了20世纪70年代一群密歇根州青少年在威斯康星州环具镇的生活与成长故事。库彻在剧中饰演主角迈克尔·阿瑟顿，这是他职业生涯的转折点。</p>
+                        </div>
+                    </article>
+
+                    <!-- Work 2 -->
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/djokovic/400/600.jpg" alt="Spread" class="work-poster">
+                        <div class="work-content">
+                            <div class="work-meta">电影 / 剧情</div>
+                            <h3 class="work-title">Spread (《爱情呼叫转移2》)</h3>
+                            <p class="work-desc">库彻在片中饰演一名游走在不同女人之间的花花公子，通过这个角色展现了他突破喜剧形象、驾驭复杂角色的能力。</p>
+                        </div>
+                    </article>
+
+                    <!-- Work 3 -->
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/jobs/400/600.jpg" alt="Jobs" class="work-poster">
+                        <div class="work-content">
+                            <div class="work-meta">传记 / 剧情</div>
+                            <h3 class="work-title">Jobs (《乔布斯传》)</h3>
+                            <p class="work-desc">库彻深度饰演苹果公司创始人史蒂夫·乔布斯。这部电影聚焦于乔布斯从创立苹果到被驱逐出公司再到回归的关键时期。</p>
+                        </div>
+                    </article>
+
+                    <!-- Work 4 -->
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/ghostshell/400/600.jpg" alt="Ghost in the Shell" class="work-poster">
+                        <div class="work-content">
+                            <div class="work-meta">科幻 / 动作</div>
+                            <h3 class="work-title">Ghost in the Shell (《攻壳机动队》)</h3>
+                            <p class="work-desc">改编自经典日本动漫，库彻在片中饰演巴特，与斯嘉丽·约翰逊共同主演。这是一部赛博朋克风格的动作大片。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biography Section -->
+        <section id="bio" class="container">
+            <div class="section-title">
+                <h2>生平经历</h2>
+                <p>从农场男孩到全球巨星</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">1978年</span>
+                    <div class="timeline-content">
+                        <h4>出生与早期生活</h4>
+                        <p>艾什顿·库彻出生于内华达州的克拉马斯福尔斯，在爱达荷州长大的他，曾就读于坎顿-艾兰高中。高中期间，他曾被诊断患有先天性心脏病，并因此休学一年进行心脏手术，这成为了他人生中重要的转折点。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">1998年</span>
+                    <div class="timeline-content">
+                        <h4>模特生涯起步</h4>
+                        <p>在大学就读期间，库彻为了赚取学费开始做模特。他凭借独特的蓝眼睛和阳光的外表迅速走红，成为了 Calvin Klein 和 Guess 的代言人，并登上了《时尚》杂志的封面。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">1998-2006年</span>
+                    <div class="timeline-content">
+                        <h4>演艺事业巅峰</h4>
+                        <p>1998年，他获得了情景喜剧《That '70s Show》的主角角色，这使他在全球范围内获得了极高的知名度。随后，他成功转型为电影演员，主演了《Dude, Where's My Car?》等票房电影。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">2010年代至今</span>
+                    <div class="timeline-content">
+                        <h4>科技投资与多元化发展</h4>
+                        <p>库彻逐渐减少影视拍摄，将重心转向科技投资。他参与了 Airbnb、Uber、Spotify 等多家独角兽公司的早期投资，被誉为“硅谷最成功的演员投资人”之一。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News / Dynamic Section -->
+        <section id="news" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>最新动态</h2>
+                    <p>关注艾什顿·库彻的最新活动与项目</p>
+                </div>
+
+                <div style="display: grid; gap: 1.5rem; max-width: 800px; margin: 0 auto;">
+                    <article style="border-bottom: 1px solid #eee; padding-bottom: 1.5rem; display: flex; gap: 1rem;">
+                        <div style="flex: 0 0 150px;">
+                            <img src="https://picsum.photos/seed/news1/150/100.jpg" alt="News Thumbnail" style="width: 100%; border-radius: 4px;">
+                        </div>
+                        <div>
+                            <div style="font-size: 0.8rem; color: var(--secondary-color); margin-bottom: 0.3rem;">2023年10月</div>
+                            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">库彻宣布成立新的制作公司</h3>
+                            <p style="font-size: 0.9rem; color: var(--light-text);">据媒体报道，艾什顿·库彻已正式成立了一家新的影视制作公司，旨在发掘和制作更多具有社会意义的原创内容。</p>
+                        </div>
+                    </article>
+
+                    <article style="border-bottom: 1px solid #eee; padding-bottom: 1.5rem; display: flex; gap: 1rem;">
+                        <div style="flex: 0 0 150px;">
+                            <img src="https://picsum.photos/seed/news2/150/100.jpg" alt="News Thumbnail" style="width: 100%; border-radius: 4px;">
+                        </div>
+                        <div>
+                            <div style="font-size: 0.8rem; color: var(--secondary-color); margin-bottom: 0.3rem;">2023年08月</div>
+                            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">重返电视荧幕，主演新剧《The Ranch》续集</h3>
+                            <p style="font-size: 0.9rem; color: var(--light-text);">经过漫长的等待，备受期待的《The Ranch》续集终于确定开拍，库彻将继续饰演退伍军人贾斯帕·哈伯。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: white; margin-bottom: 1rem;">Ashton<span>库彻</span></div>
+                    <p style="color: #aaa; font-size: 0.9rem;">
+                        本站致力于提供关于艾什顿·库彻的全面资料、影视作品介绍及最新动态。所有资料仅供娱乐参考。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#profile">个人资料</a></li>
+                        <li><a href="#works">代表作品</a></li>
+                        <li><a href="#bio">生平经历</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">IMDb 页面</a></li>
+                        <li><a href="#">维基百科</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Ashton Kutcher Fan Guide. All rights reserved. Design for educational purposes.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
