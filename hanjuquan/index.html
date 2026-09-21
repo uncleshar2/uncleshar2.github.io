@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩剧圈 - 提供最新韩剧资讯、详细剧情解析、演员阵容介绍及高清观看指南。专注于韩流文化，助您一站式掌握热门韩剧动态。">
+    <meta name="keywords" content="韩剧圈, 韩国电视剧, 韩剧推荐, 韩流资讯, 欧巴, 女神">
+    <title>韩剧圈-最新韩流剧集推荐与深度解析平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00a8e8;
+            --secondary-color: #ff4757;
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: rgba(30, 30, 30, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #333;
+            border-radius: 20px;
+            padding: 4px 12px;
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 4px;
+            outline: none;
+            width: 120px;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, var(--bg-dark), transparent), url('https://picsum.photos/seed/kdrama/1920/600') no-repeat center center/cover;
+            opacity: 0.7;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10%;
+        }
+
+        .hero-tag {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            width: fit-content;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #008cc2;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            margin-left: 12px;
+        }
+
+        .btn-outline:hover {
+            border-color: white;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* 通用板块样式 */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #333;
+            margin-left: 16px;
+        }
+
+        /* 热门推荐网格 */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            padding-top: 140%; /* 5:7 Aspect Ratio */
+            overflow: hidden;
+        }
+
+        .card-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.05);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-icon {
+            font-size: 3rem;
+            color: white;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+
+        .card-info {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .rating {
+            color: #f1c40f;
+        }
+
+        /* 最新资讯列表 */
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        .news-item {
+            display: flex;
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: background 0.3s;
+        }
+
+        .news-item:hover {
+            background-color: #252525;
+        }
+
+        .news-thumb {
+            width: 240px;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .news-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .news-category {
+            color: var(--primary-color);
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .news-title {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .news-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .news-footer {
+            display: flex;
+            gap: 16px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* 频道分类 */
+        .categories-wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .category-card {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .category-card:nth-child(2) { background: linear-gradient(135deg, #434343, #000000); }
+        .category-card:nth-child(3) { background: linear-gradient(135deg, #833ab4, #fd1d1d); }
+        .category-card:nth-child(4) { background: linear-gradient(135deg, #00b09b, #96c93d); }
+
+        .category-card:hover {
+            transform: scale(1.03);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .category-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* 专题精选 */
+        .feature-section {
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 60px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .feature-img {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .feature-img img {
+            width: 100%;
+            display: block;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-content h3 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #0a0a0a;
+            padding: 60px 0 20px;
+            margin-top: auto;
+            border-top: 1px solid #333;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: 16px;
+            font-size: 0.9rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 12px 0;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 16px;
+                font-size: 0.85rem;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .grid-layout {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .news-item {
+                flex-direction: column;
+            }
+
+            .news-thumb {
+                width: 100%;
+                height: 180px;
+            }
+
+            .categories-wrapper {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-section {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .categories-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部导航 -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>韩剧圈</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">热播剧集</a></li>
+                    <li><a href="#">经典回顾</a></li>
+                    <li><a href="#">欧巴女神</a></li>
+                    <li><a href="#">影视资讯</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索剧集或演员...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 首屏 -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <span class="hero-tag">本周强档</span>
+                <h1>黑暗荣耀：复仇的终章</h1>
+                <p>文东恩终于迎来了属于她的正义。这是一部关于创伤、复仇与治愈的深刻韩剧，探讨人性在极端环境下的挣扎与重生。</p>
+                <div>
+                    <a href="#" class="btn btn-primary">立即观看</a>
+                    <a href="#" class="btn btn-outline">查看详情</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 频道分类 -->
+            <section class="categories-wrapper">
+                <div class="category-card">
+                    <span class="category-icon">🎬</span>
+                    <div class="category-name">爱情浪漫</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🔪</span>
+                    <div class="category-name">悬疑惊悚</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">💼</span>
+                    <div class="category-name">职场商战</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">⏳</span>
+                    <div class="category-name">穿越时空</div>
+                </div>
+            </section>
+
+            <!-- 热门推荐 -->
+            <section>
+                <div class="section-title">
+                    <h2>热门推荐</h2>
+                    <a href="#" style="font-size: 0.9rem; color: var(--primary-color);">查看全部 &rarr;</a>
+                </div>
+                <div class="grid-layout">
+                    <!-- 卡片 1 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/kdrama1/400/560" alt="浪漫风暴" class="card-img">
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">浪漫风暴</h3>
+                            <div class="card-meta">
+                                <span>2023</span>
+                                <span class="rating">★ 9.2</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 卡片 2 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/kdrama2/400/560" alt="泪之女王" class="card-img">
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">泪之女王</h3>
+                            <div class="card-meta">
+                                <span>2024</span>
+                                <span class="rating">★ 8.8</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 卡片 3 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/kdrama3/400/560" alt="鬼怪" class="card-img">
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">鬼怪</h3>
+                            <div class="card-meta">
+                                <span>2016</span>
+                                <span class="rating">★ 9.5</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 卡片 4 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/kdrama4/400/560" alt="机智的医生生活" class="card-img">
+                            <div class="play-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">机智的医生生活</h3>
+                            <div class="card-meta">
+                                <span>2020</span>
+                                <span class="rating">★ 9.6</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 资讯动态 -->
+            <section>
+                <div class="section-title">
+                    <h2>最新资讯</h2>
+                </div>
+                <div class="news-list">
+                    <article class="news-item">
+                        <div class="news-thumb">
+                            <img src="https://picsum.photos/seed/news1/400/300" alt="韩剧趋势">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-category">行业观察</div>
+                            <h3 class="news-title">2024年韩剧发展趋势：流媒体时代的变革</h3>
+                            <p class="news-excerpt">随着Netflix等平台在韩国本土化布局的深入，韩剧的制作成本、叙事节奏以及演员选择都发生了显著变化...</p>
+                            <div class="news-footer">
+                                <span>2024-05-20</span>
+                                <span>1.2k 阅读</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <div class="news-thumb">
+                            <img src="https://picsum.photos/seed/news2/400/300" alt="演员动态">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-category">艺人动态</div>
+                            <h3 class="news-title">朴宝剑新剧定档，粉丝期待值拉满</h3>
+                            <p class="news-excerpt">备受瞩目的浪漫喜剧《你的名字》即将在夏季上线，朴宝剑与新生代女演员的首次合作引发热议...</p>
+                            <div class="news-footer">
+                                <span>2024-05-18</span>
+                                <span>3.5k 阅读</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <div class="news-thumb">
+                            <img src="https://picsum.photos/seed/news3/400/300" alt="经典回顾">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-category">经典回顾</div>
+                            <h3 class="news-title">重温《请回答1988》：为何至今仍是韩剧神作？</h3>
+                            <p class="news-excerpt">十年过去，这部家庭剧依然能触动无数观众的心。它不仅仅是一部回忆录，更是关于成长、友情与爱的普世颂歌...</p>
+                            <div class="news-footer">
+                                <span>2024-05-15</span>
+                                <span>5.8k 阅读</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 专题精选 -->
+            <section>
+                <div class="section-title">
+                    <h2>专题精选：冬季恋歌</h2>
+                </div>
+                <div class="feature-section">
+                    <div class="feature-img">
+                        <img src="https://picsum.photos/seed/feature/800/600" alt="冬季恋歌">
+                    </div>
+                    <div class="feature-content">
+                        <h3>跨越时光的纯爱经典</h3>
+                        <p style="color: #aaa; margin-bottom: 20px;">
+                            《冬季恋歌》是裴勇俊与崔智友的巅峰之作，那场雪中的对视至今仍是韩剧史上的经典画面。在这个专题中，我们将回顾这部剧集的幕后故事、OST名曲以及它对后续韩剧浪漫风格的影响。
+                        </p>
+                        <ul class="feature-list">
+                            <li><span>主演：裴勇俊 / 崔智友</span> <span>2001年</span></li>
+                            <li><span>导演：李炳宪</span> <span>纯爱巅峰</span></li>
+                            <li><span>OST：从《First Love》到《情书》</span> <span>传唱至今</span></li>
+                            <li><span>经典台词：你好吗？我很好。</span> <span>跨越国界的问候</span></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">阅读专题</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span>韩剧圈</span>
+                    </a>
+                    <p>韩剧圈致力于为亚洲观众提供最全面、最及时的韩国电视剧资讯与观看指南。在这里，我们不仅追剧，更读懂剧情背后的文化与情感。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">热播榜单</a></li>
+                        <li><a href="#">新剧预告</a></li>
+                        <li><a href="#">演员大全</a></li>
+                        <li><a href="#">高清资源</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">爱情喜剧</a></li>
+                        <li><a href="#">犯罪悬疑</a></li>
+                        <li><a href="#">历史古装</a></li>
+                        <li><a href="#">职场商战</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">广告合作</a></li>
+                        <li><a href="#">用户协议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 韩剧圈 版权所有. 本站内容仅供学习交流使用，版权归原作者所有.
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
